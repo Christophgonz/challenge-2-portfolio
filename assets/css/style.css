@@ -1,0 +1,36 @@
+header {
+  display: flex;
+  color: rgb(70, 70, 70);
+  background-color: rgb(70, 70, 70);
+  flex-flow: row wrap;
+}
+
+header h1 {
+  background-color: aquamarine;
+  flex: 1 0 30px;
+  width: 25%;
+}
+header nav {
+  display: flex;
+  flex: 3 0 30px;
+  width: 75%;
+  justify-content: flex-end;
+}
+
+header nav ul {
+  display: flex;
+  flex-flow: row;
+  list-style-type: none;
+}
+
+header nav ul li {
+  font-size: 20px;
+  flex: 3 1 20px;
+  text-decoration: underline;
+  color: aquamarine;
+}
+
+header a {
+    
+  color: aquamarine;
+}
