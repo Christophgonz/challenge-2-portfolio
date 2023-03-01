@@ -5,32 +5,88 @@ header {
   flex-flow: row wrap;
 }
 
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
 header h1 {
+  display: flex;
+  font-size: 30px;
+  font-weight: 700;
   background-color: aquamarine;
   flex: 1 0 30px;
   width: 25%;
+  text-align: right;
+  
 }
+
 header nav {
   display: flex;
-  flex: 3 0 30px;
   width: 75%;
   justify-content: flex-end;
 }
 
-header nav ul {
+header ul {
   display: flex;
+  list-style: none;
   flex-flow: row;
-  list-style-type: none;
+  align-items: center;
+  width: 50%;
 }
 
-header nav ul li {
-  font-size: 20px;
-  flex: 3 1 20px;
-  text-decoration: underline;
+header li {
+  display: flex;
+  flex: 1 1 10px;
   color: aquamarine;
+  width: 25%;
+  border-bottom: 2px solid aquamarine;
+  justify-content: space-around;
+  margin: 2px;
 }
 
 header a {
-    
+  text-align: center;
+  font-weight: 400;
+  width: 100%;
   color: aquamarine;
+  text-decoration: none;
+}
+
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+section h2 {
+  text-align: right;
+  float: left;
+  width: 20%;
+}
+
+section article {
+  border-left: 4px solid black;
+  margin: 5px;
+  width: 70%;
+}
+
+section p{
+  margin: 20px;
+}
+
+section ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+}
+
+section li{
+  margin: 5px;
+  border-bottom: 2px solid darkblue;
+}
+
+section a{
+  text-decoration: none;
+  color: darkblue;
 }
