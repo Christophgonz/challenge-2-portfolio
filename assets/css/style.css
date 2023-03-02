@@ -9,6 +9,8 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
+/* Header Styles */
+
 header h1 {
   display: flex;
   font-size: 30px;
@@ -29,33 +31,52 @@ header nav {
 header ul {
   display: flex;
   list-style: none;
-  flex-flow: row;
+  flex-flow: row nowrap;
   align-items: center;
+  justify-content: flex-end;
   width: 50%;
 }
 
 header li {
   display: flex;
-  flex: 1 1 10px;
   color: aquamarine;
-  width: 25%;
-  border-bottom: 2px solid aquamarine;
-  justify-content: space-around;
-  margin: 2px;
+  margin: 4px;
 }
 
 header a {
   text-align: center;
   font-weight: 400;
-  width: 100%;
   color: aquamarine;
   text-decoration: none;
+  border-bottom: 2px solid aquamarine;
 }
 
+.postheader{
+  position: relative;
+  height: 75rem;
+  width: 100%;
+  background-image: url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+  background-size: cover;
+  background-position: center;
+}
+
+.postheader::after{
+  position: absolute;
+  content:'Cool Subtitle Here';
+  background-color: aquamarine;
+  width: 20%;
+  left: 70%;
+  bottom: 10%;
+  padding: 15px;
+}
+
+/* Main Styles */
 
 section {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 section h2 {
@@ -66,13 +87,58 @@ section h2 {
 
 section article {
   border-left: 4px solid black;
+  padding: 10px;
   margin: 5px;
   width: 70%;
 }
 
+/* About Me Styles */
+
 section p{
   margin: 20px;
 }
+
+/* Work Styles */
+
+.card-container{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.big-card {
+  position: relative;
+  flex-grow: 2 1 90%;
+  height: 400px;
+  width: 100%;
+}
+
+.small-card{
+  position: relative;
+  flex: 1 1 45%;
+  height: 200px;
+  width: 50%;
+}
+
+article figure::before{
+  position: absolute;
+  content:'Cool Subtitle Here';
+  background-color: aquamarine;
+  padding: 10px;
+  bottom: 20%;
+}
+
+article figure{
+  margin: 5px;
+  display: flex;
+  border: 5px solid aquamarine;
+    background-image: url(https://placekitten.com/g/200/200);
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+/* Contact Me Styles */
 
 section ul{
   display: flex;
