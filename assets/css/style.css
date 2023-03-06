@@ -6,32 +6,31 @@ header {
 }
 
 body {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  margin: 0px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 1px;
 }
 
 /* Header Styles */
 
-.title{
+.title {
   display: flex;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 50px;
   background-color: aquamarine;
   flex: 1 0 30px;
   width: 25%;
   justify-content: flex-end;
   padding: 10px;
-  
 }
 
-header nav {
+.navholder{
   display: flex;
   width: 75%;
   justify-content: flex-end;
-  margin:5px;
+  margin: 5px;
 }
 
-header ul {
+.navlist{
   display: flex;
   list-style: none;
   flex-flow: row nowrap;
@@ -40,13 +39,13 @@ header ul {
   width: 50%;
 }
 
-header li {
+.navitems{
   display: flex;
   color: aquamarine;
   margin: 4px;
 }
 
-.navlinks{
+.navlinks {
   text-align: center;
   color: aquamarine;
   text-decoration: none;
@@ -55,30 +54,32 @@ header li {
   margin: 1px;
 }
 
-.postheader{
+/* Background image directly after header */
+
+.postheader {
   position: relative;
   height: 50rem;
   width: 100%;
   background-image: url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
   background-size: cover;
   background-position: center;
-  margin: 0px
+  margin: 0px;
 }
 
-.postheader::after{
+.postheader::after {
   position: absolute;
-  content:'Cool Subtitle Here';
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  content: "Cool Subtitle Here";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 30px;
   background-color: aquamarine;
-  left: 80%;
+  right: 10%;
   bottom: 10%;
   padding: 15px;
 }
 
 /* Main Styles */
 
-section {
+.information{
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -102,13 +103,13 @@ section article {
 
 /* About Me Styles */
 
-section p{
+.about-me-text {
   margin: 20px;
 }
 
 /* Work Styles */
 
-.card-container{
+.card-container {
   display: flex;
   flex-flow: row wrap;
 }
@@ -120,66 +121,116 @@ section p{
   width: 100%;
 }
 
-.small-card{
+.small-card {
   position: relative;
   flex: 1 1 45%;
   height: 200px;
   width: 50%;
 }
 
-/* article figure::before{
+.content {
   position: absolute;
-  content:'';
   background-color: aquamarine;
-  width: 20%;
-  height: 3rem;
-  padding: 10px;
-  bottom: 20%;
-} */
-
-.content{
-  position: absolute;
-  bottom: 20%;
+  padding: 2%;
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 1%;
+  bottom: 10%;
 }
 
-.picture{
+.nameplate {
+  font-size: 100%;
+}
+
+.subtitle {
+  font-size: 70%;
+}
+
+.picture {
   position: relative;
   flex: 1 1 10%;
-  z-index: -1;
+  z-index: -3;
 }
 
-article figure{
+article figure {
   margin: 5px;
   display: flex;
   border: 5px solid aquamarine;
   background-size: cover;
   background-position: center;
-  transition: box-shadow .25s;
-  box-shadow: inset 0 0 0 1000px rgba(127,255,212,.2);
-  /* background-image: url(https://placekitten.com/g/200/200) ;  */
+  transition: box-shadow 0.25s;
+  box-shadow: inset 0 0 0 1000px rgba(127, 255, 212, 0.2);
 }
 
-article figure:hover{
-  transition: box-shadow .25s;
+article figure:hover {
+  transition: box-shadow 0.25s;
   box-shadow: none;
 }
 
-
 /* Contact Me Styles */
 
-section ul{
+section ul {
   display: flex;
   flex-direction: row;
   list-style: none;
   justify-content: space-around;
 }
 
-section li{
+section li {
   margin: 5px;
   border-bottom: 2px solid darkblue;
 }
 
-section a{
+section a {
   text-decoration: none;
   color: darkblue;
 }
+
+/* Dynamic Screen Size */
+
+/* Tablets */
+@media screen and (max-width: 992px) {
+  header{
+    flex-flow: column wrap;
+  }
+
+  .title{
+    width: 100%;
+    justify-content: center;
+    padding: 0px;
+  }
+
+  .navholder{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navlist{
+    width: 100%;
+    justify-content: center;
+    padding:0px;
+  }
+
+  .information{
+    flex-flow: column;
+  }
+
+  section h2{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-right: 0px;
+
+  }
+
+  section article{
+    width: 100%;
+    justify-content: center;
+    border-left: none;
+    border-top: 4px solid black;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 10px;
+  }
+}
+

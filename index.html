@@ -11,27 +11,27 @@
   <body>
     <header>
       <h1 class="title">Lernantino</h1>
-      <nav>
-        <ul>
-          <li><a class="navlinks" href="#about-me">About Me</a></li>
-          <li><a class="navlinks" href="#work">Work</a></li>
-          <li><a class="navlinks" href="#contact-me">Contact Me</a></li>
-          <li><a class="navlinks" href="#resume">Resume</a></li>
+      <nav class="navholder">
+        <ul class="navlist">
+          <li class="navitems"><a class="navlinks" href="#about-me">About Me</a></li>
+          <li class="navitems"><a class="navlinks" href="#work">Work</a></li>
+          <li class="navitems"><a class="navlinks" href="#contact-me">Contact Me</a></li>
+          <li class="navitems"><a class="navlinks" href="#resume">Resume</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <figure class="postheader"></figure>
-      <section id="about-me">
+      <section class="information" id="about-me">
         <h2>About Me</h2>
         <article>
-          <p>
+          <p class="about-me-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
             id odit culpa nulla voluptatem corporis facere modi illum, magnam
             eveniet delectus eius! Obcaecati consequatur magnam hic accusantium
             mollitia neque veniam!
           </p>
-          <p>
+          <p class="about-me-text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
             iure dolor doloremque deserunt sed quisquam, dolore natus dolorum,
             facere quod veniam provident ab corrupti reprehenderit?
@@ -39,28 +39,67 @@
           </p>
         </article>
       </section>
-      <section id="work">
+      <section class="information" id="work">
         <h2>Work</h2>
         <article class="card-container">
           <figure class="big-card">
-            <img class="picture" src="https://placekitten.com/g/200/200" alt="">
-            <section> </section>
+            <img
+              class="picture"
+              src="https://placekitten.com/g/200/200"
+              alt="Placeholder image of a kitten."
+            />
+            <section class="content">
+              <p class="nameplate">Big Project</p>
+              <p class="subtitle">Short Description</p>
+            </section>
           </figure>
           <figure class="small-card">
-            
+            <img
+              class="picture"
+              src="https://placekitten.com/g/200/201"
+              alt="Placeholder image of a kitten."
+            />
+            <section class="content">
+              <p class="nameplate">Example Project</p>
+              <p class="subtitle">Description of the project</p>
+            </section>
           </figure>
           <figure class="small-card">
-            
+            <img
+              class="picture"
+              src="https://placekitten.com/g/200/202"
+              alt="Placeholder image of a kitten."
+            />
+            <section class="content">
+              <p class="nameplate">Project Demo</p>
+              <p class="subtitle">Describes the project</p>
+            </section>
           </figure>
           <figure class="small-card">
-            
+            <img
+              class="picture"
+              src="https://placekitten.com/g/200/203"
+              alt="Placeholder image of a kitten."
+            />
+            <section class="content">
+              <p class="nameplate">Demo</p>
+              <p class="subtitle">Sample Text</p>
+            </section>
           </figure>
           <figure class="small-card">
-            
+            <img
+              class="picture"
+              src="https://placekitten.com/g/200/204"
+              alt="Placeholder image of a kitten."
+            />
+            <section class="content">
+              <p class="nameplate">Sample Project</p>
+              <p class="subtitle">Describes the project</p>
+            </section>
           </figure>
         </article>
       </section>
-      <section id="conctact-me">
+      <section class="information" id="contact-me">
         <h2>Contact Me</h2>
         <article>
           <ul>
