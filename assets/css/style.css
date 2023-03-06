@@ -6,19 +6,21 @@ header {
 }
 
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0px;
 }
 
 /* Header Styles */
 
-header h1 {
+.title{
   display: flex;
-  font-size: 30px;
-  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 50px;
   background-color: aquamarine;
   flex: 1 0 30px;
   width: 25%;
-  text-align: right;
+  justify-content: flex-end;
+  padding: 10px;
   
 }
 
@@ -26,6 +28,7 @@ header nav {
   display: flex;
   width: 75%;
   justify-content: flex-end;
+  margin:5px;
 }
 
 header ul {
@@ -43,29 +46,32 @@ header li {
   margin: 4px;
 }
 
-header a {
+.navlinks{
   text-align: center;
-  font-weight: 400;
   color: aquamarine;
   text-decoration: none;
+  font-size: 20px;
   border-bottom: 2px solid aquamarine;
+  margin: 1px;
 }
 
 .postheader{
   position: relative;
-  height: 75rem;
+  height: 50rem;
   width: 100%;
   background-image: url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
   background-size: cover;
   background-position: center;
+  margin: 0px
 }
 
 .postheader::after{
   position: absolute;
   content:'Cool Subtitle Here';
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
   background-color: aquamarine;
-  width: 20%;
-  left: 70%;
+  left: 80%;
   bottom: 10%;
   padding: 15px;
 }
@@ -82,7 +88,9 @@ section {
 section h2 {
   text-align: right;
   float: left;
+  font-size: 40px;
   width: 20%;
+  margin-right: 10px;
 }
 
 section article {
@@ -107,7 +115,7 @@ section p{
 
 .big-card {
   position: relative;
-  flex-grow: 2 1 90%;
+  flex: 1 1 70%;
   height: 400px;
   width: 100%;
 }
@@ -119,23 +127,42 @@ section p{
   width: 50%;
 }
 
-article figure::before{
+/* article figure::before{
   position: absolute;
-  content:'Cool Subtitle Here';
+  content:'';
   background-color: aquamarine;
+  width: 20%;
+  height: 3rem;
   padding: 10px;
   bottom: 20%;
+} */
+
+.content{
+  position: absolute;
+  bottom: 20%;
+}
+
+.picture{
+  position: relative;
+  flex: 1 1 10%;
+  z-index: -1;
 }
 
 article figure{
   margin: 5px;
   display: flex;
   border: 5px solid aquamarine;
-    background-image: url(https://placekitten.com/g/200/200);
   background-size: cover;
   background-position: center;
+  transition: box-shadow .25s;
+  box-shadow: inset 0 0 0 1000px rgba(127,255,212,.2);
+  /* background-image: url(https://placekitten.com/g/200/200) ;  */
 }
 
+article figure:hover{
+  transition: box-shadow .25s;
+  box-shadow: none;
+}
 
 
 /* Contact Me Styles */
