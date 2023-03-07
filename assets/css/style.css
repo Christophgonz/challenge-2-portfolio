@@ -1,42 +1,36 @@
-header {
-  display: flex;
-  color: rgb(70, 70, 70);
-  background-color: rgb(70, 70, 70);
-  flex-flow: row wrap;
-}
-
+/* Styles for the entire document */
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 1px;
 }
 
 /* Header Styles */
+header {
+  display: flex;
+  color: rgb(70, 70, 70);
+  background-color: rgb(70, 70, 70);
+}
 
 .title {
   display: flex;
   font-family: "Courier New", Courier, monospace;
-  font-size: 50px;
   background-color: aquamarine;
-  flex: 1 0 30px;
-  width: 25%;
+  flex: 1 1 0px;
   justify-content: flex-end;
-  padding: 10px;
+  padding: 20px;
 }
 
 .navholder{
   display: flex;
-  width: 75%;
+  flex: 3 1 0px;
   justify-content: flex-end;
-  margin: 5px;
 }
 
 .navlist{
   display: flex;
   list-style: none;
-  flex-flow: row nowrap;
   align-items: center;
-  justify-content: flex-end;
-  width: 50%;
+  padding: 5px;
 }
 
 .navitems{
@@ -49,18 +43,19 @@ body {
   text-align: center;
   color: aquamarine;
   text-decoration: none;
+  flex: 1 1 0px;
   font-size: 20px;
   border-bottom: 2px solid aquamarine;
   margin: 1px;
 }
 
-/* Background image directly after header */
+/* Background directly after header */
 
 .postheader {
   position: relative;
   height: 50rem;
   width: 100%;
-  background-image: url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+  background-image: url("../images/motherboard.jpg");
   background-size: cover;
   background-position: center;
   margin: 0px;
@@ -119,13 +114,15 @@ section article {
   flex: 1 1 70%;
   height: 400px;
   width: 100%;
+  margin: 5px;
 }
 
 .small-card {
   position: relative;
   flex: 1 1 45%;
   height: 200px;
-  width: 50%;
+  width: 100%;
+  margin: 5px
 }
 
 .content {
@@ -149,6 +146,7 @@ section article {
 .picture {
   position: relative;
   flex: 1 1 10%;
+  object-fit: cover;
   z-index: -3;
 }
 
@@ -197,7 +195,8 @@ section a {
   .title{
     width: 100%;
     justify-content: center;
-    padding: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 
   .navholder{
@@ -208,7 +207,6 @@ section a {
   .navlist{
     width: 100%;
     justify-content: center;
-    padding:0px;
   }
 
   .information{
